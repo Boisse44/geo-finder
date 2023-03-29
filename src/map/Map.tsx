@@ -30,7 +30,7 @@ const Map: React.FunctionComponent<MapProps> = ({ location, zoomLevel }) => (
     <div className="map">
       <div className="google-map" style={{ height: '100vh', width: '100%' }}>
         <GoogleMapReact
-           bootstrapURLKeys={{ key:''}}
+           bootstrapURLKeys={{ key: process.env.REACT_APP_MAPS_API_KEY || ''}}
           defaultCenter={location}
           defaultZoom={zoomLevel}
         >
